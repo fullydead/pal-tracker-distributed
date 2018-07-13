@@ -7,17 +7,17 @@ dependencyManagement {
     }
 }
 
+
 dependencies {
     compile project(":components:rest-support")
-
     compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-actuator"
+    //compile group: 'io.pivotal.spring.cloud', name: 'spring-cloud-services-starter-service-registry', version: '1.6.0.RELEASE'
 
+    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
     compile "com.zaxxer:HikariCP:2.3.7"
     compile "mysql:mysql-connector-java:$mysqlVersion"
     compile "ch.qos.logback:logback-classic:1.1.11"
-
-    compile "org.springframework.boot:spring-boot-starter-actuator"
-    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
 
     testCompile project(":components:test-support")
 }

@@ -5,9 +5,8 @@ applications:
   - route: allocations-pal-koushik-richard.apps.evans.pal.pivotal.io
   memory: 1G
   instances: 1
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-koushik-richard.apps.evans.pal.pivotal.io
   services:
   - tracker-allocations-database
+  - tracker-service-registry
 
 
